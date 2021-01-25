@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Attributes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <section>
+    <article>
+        <h1>HTML Global Attributes</h1>
+        <p><strong>Global attributes</strong> are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.</p>
+
+        <p>Global attributes may be specified on all HTML elements, even those not specified in the standard. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as <code>foo hidden...foo</code>, even though <code>foo</code> is not a valid HTML element.</p>
+        
+        <p>In addition to the basic HTML global attributes, the following global attributes also exist:</p>
+        <ul>
+            <li><strong>ml:lang</strong> and <strong>xml:base</strong> — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.</li>
+            <li>The multiple <strong>aria-*</strong> attributes, used for improving accessibility.</li>
+            <li>The event handler attributes: <i>onabort, onautocomplete, onautocompleteerror, onblur, oncancel, oncanplay, oncanplaythrough, onchange, onclick, onclose, oncontextmenu, oncuechange, ondblclick, ondrag, ondragend, ondragenter, ondragexit, ondragleave, ondragover, ondragstart, ondrop, ondurationchange, onemptied, onended, onerror, onfocus, oninput, oninvalid, onkeydown, onkeypress, onkeyup, onload, onloadeddata, onloadedmetadata, onloadstart, onmousedown, onmouseenter, onmouseleave, onmousemove, onmouseout, onmouseover, onmouseup, onmousewheel, onpause, onplay, onplaying, onprogress, onratechange, onreset, onresize, onscroll, onseeked, onseeking, onselect, onshow, onsort, onstalled, onsubmit, onsuspend, ontimeupdate, ontoggle, onvolumechange, onwaiting.</i></li>
+        </ul>
+    </article>
+    </section>
+    <h2>Table of Global Attributes</h2>
+    <section>
+        <table>
+        <tbody>
+            <tr>
+            <td class="firstcol">accesskey</td>
+            <td>Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">autocapitalize</td>
+            <td>Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
+            off or none, no autocapitalization is applied (all letters default to lowercase)
+            on or sentences, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase
+            words, the first letter of each word defaults to a capital letter; all other letters default to lowercase
+            characters, all letters should default to uppercase</td>
+            </tr>
+            <tr>
+            <td class="firstcol">class</td>
+            <td>A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the class selectors or functions like the method Document.getElementsByClassName().</td>
+            </tr>
+            <tr>
+            <td class="firstcol">contenteditable</td>
+            <td>An enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
+            true or the empty string, which indicates that the element must be editable;
+            false, which indicates that the element must not be editable.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">data-*</td>
+            <td>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM representation that may be used by scripts. All such custom data are available via the HTMLElement interface of the element the attribute is set on. The HTMLElement.dataset property gives access to them.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">dir</td>
+            <td>An enumerated attribute indicating the directionality of the element's text. It can have the following values:
+            ltr, which means left to right and is to be used for languages that are written from the left to the right (like English);
+            rtl, which means right to left and is to be used for languages that are written from the right to the left (like Arabic);
+            auto, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">draggable</td>
+            <td>An enumerated attribute indicating whether the element can be dragged, using the Drag and Drop API. It can have the following values:
+            true, which indicates that the element may be dragged
+            false, which indicates that the element may not be dragged.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">enterkeyhint</td>
+            <td>Hints what action label (or icon) to present for the enter key on virtual keyboards.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">exportparts</td>
+            <td>Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">hidden</td>
+            <td>A Boolean attribute indicates that the element is not yet, or is no longer, relevant. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">id</td>
+            <td>Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).</td>
+            </tr>
+            <tr>
+            <td class="firstcol">inputmode</td>
+            <td>Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on <input> elements, but is usable on any element while in contenteditable mode.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">is</td>
+            <td>Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see Using custom elements for more details).</td>
+            </tr>
+            <tr>
+            <td class="firstcol">itemid</td>
+            <td>The unique, global identifier of an item.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">itemprop</td>
+            <td>Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">itemref</td>
+            <td>Properties that are not descendants of an element with the itemscope attribute can be associated with the item using an itemref. It provides a list of element ids (not itemids) with additional properties elsewhere in the document.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">itemscope</td>
+            <td>itemscope (usually) works along with itemtype to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as schema.org) that describes the item and its properties context.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">itemtype</td>
+            <td>Specifies the URL of the vocabulary that will be used to define itemprops (item properties) in the data structure. itemscope is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">lang</td>
+            <td>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in Tags for Identifying Languages (BCP47). xml:lang has priority over it.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">part</td>
+            <td>A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the ::part pseudo-element.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">slot</td>
+            <td>Assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the (slot) element whose name attribute's value matches that slot attribute's value.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">spellcheck</td>
+            <td>An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
+            true, which indicates that the element should be, if possible, checked for spelling errors;
+            false, which indicates that the element should not be checked for spelling errors.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">style</td>
+            <td>Contains CSS styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the style element have mainly the purpose of allowing for quick styling, for example for testing purposes.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">tabindex</td>
+            <td>An integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:
+            a negative value means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
+            0 means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
+            a positive value means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the tabindex. If several elements share the same tabindex, their relative order follows their relative positions in the document.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">title</td>
+            <td>Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.</td>
+            </tr>
+            <tr>
+            <td class="firstcol">translate</td>
+            <td>An enumerated attribute that is used to specify whether an element's attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
+            empty string and yes, which indicates that the element will be translated.
+            no, which indicates that the element will not be translated.</td>
+            </tr>
+            <tr>
+            <td colspan="2"><strong>Note</strong>: The item<strong>*</strong> attributes are part of the WHATWG HTML Microdata feature.</td>
+            </tr>
+        </tbody>
+        </table>
+    </section>
+    <section>
+        <footer>
+            <h3>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">MDN Web Docs</a></h3>
+        </footer>
+    </section>
+    </body>
+</html>
